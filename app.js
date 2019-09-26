@@ -16,7 +16,6 @@ if (purchaseType == 'regular') {
 } 
     }
 
-
 const result = cashback <= maxCashback ? Math.trunc(cashback) : maxCashback;
 console.log(result);
 
