@@ -1,9 +1,22 @@
 console.log("Tinkoff");
 
-const purchaseCash = 9999;
-const purchaseType = 'regular';
-const cashback = purchaseType == 'regular' ? total = purchaseCash * 0.01 : 
-    purchaseType == 'elevated' ? total = purchaseCash * 0.05 : total = purchaseCash * 0.3;
-const result = cashback <= 3000 ? Math.trunc(cashback) : 3000;
+const purchaseCash = 21756;
+const purchaseType = 'special';
+const maxCashback = 3000;
+const onePercent = 0.01;
+const twoPercent = 0.05;
+const threePercent = 0.3;
+
+if (purchaseType == 'regular') {
+    cashback = purchaseCash * onePercent;
+} else { if (purchaseType == 'elevated') {
+    cashback = purchaseCash * twoPercent;
+} else { if (purchaseType == 'special') {
+    cashback = purchaseCash * threePercent; }
+} 
+    }
+
+
+const result = cashback <= maxCashback ? Math.trunc(cashback) : maxCashback;
 console.log(result);
 
